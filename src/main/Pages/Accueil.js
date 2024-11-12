@@ -3,51 +3,51 @@ import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-import ImageforIntro1 from "../Style/Images/Project/Exterior-0.jpg";
-import ImageforIntro4 from "../Style/Images/Project/Pharmacie-3.jpg";
+// import ImageforIntro1 from "../Style/Images/Project/Exterior-0.jpg";
+// import ImageforIntro4 from "../Style/Images/Project/Pharmacie-3.jpg";
 
-import ImageProjectB1 from "../Style/Images/Project/City-8.jpg";
-import ImageProjectB2 from "../Style/Images/Project/City-1.jpg";
-import ImageProjectB3 from "../Style/Images/Project/City-3.jpg";
-import ImageProjectB9 from "../Style/Images/Project/City-9.jpg";
+// import ImageProjectB1 from "../Style/Images/Project/City-8.jpg";
+// import ImageProjectB2 from "../Style/Images/Project/City-1.jpg";
+// import ImageProjectB3 from "../Style/Images/Project/City-3.jpg";
+// import ImageProjectB9 from "../Style/Images/Project/City-9.jpg";
 
-import ImageProjectE3 from "../Style/Images/Project/Pharmacie-3.jpg";
+// import ImageProjectE3 from "../Style/Images/Project/Pharmacie-3.jpg";
 
-import ImageProjectI2 from "../Style/Images/Project/Villa_B-2.jpg";
-import ImageProjectI3 from "../Style/Images/Project/Villa_B-3.jpg";
-import ImageProjectI4 from "../Style/Images/Project/Villa_B-8.jpg";
+// import ImageProjectI2 from "../Style/Images/Project/Villa_B-2.jpg";
+// import ImageProjectI3 from "../Style/Images/Project/Villa_B-3.jpg";
+// import ImageProjectI4 from "../Style/Images/Project/Villa_B-8.jpg";
 
-import ImageProjectK1 from "../Style/Images/Project/Pharmacie_C-1.jpg";
+// import ImageProjectK1 from "../Style/Images/Project/Pharmacie_C-1.jpg";
 
-import ImageProjectL1 from "../Style/Images/Project/Villa_Teranga_Al_Amin-1.jpg";
-import ImageProjectL2 from "../Style/Images/Project/Villa_Teranga_Al_Amin-2.jpg";
+// import ImageProjectL1 from "../Style/Images/Project/Villa_Teranga_Al_Amin-1.jpg";
+// import ImageProjectL2 from "../Style/Images/Project/Villa_Teranga_Al_Amin-2.jpg";
 
-import ImageProjectH1 from "../Style/Images/Project/Villa_Astan-Ndiaye-1.jpg";
-import ImageProjectJ1 from "../Style/Images/Project/Appartement-F4-A-1.jpg";
+// import ImageProjectH1 from "../Style/Images/Project/Villa_Astan-Ndiaye-1.jpg";
+// import ImageProjectJ1 from "../Style/Images/Project/Appartement-F4-A-1.jpg";
 
-import ImageProjectS1 from "../Style/Images/Project/Villa_Samb-1.jpg";
-import ImageProjectS2 from "../Style/Images/Project/Villa_Samb-2.jpg";
-import ImageProjectS3 from "../Style/Images/Project/Villa_Samb-3.jpg";
-import ImageProjectS4 from "../Style/Images/Project/Villa_Samb-4.jpg";
+// import ImageProjectS1 from "../Style/Images/Project/Villa_Samb-1.jpg";
+// import ImageProjectS2 from "../Style/Images/Project/Villa_Samb-2.jpg";
+// import ImageProjectS3 from "../Style/Images/Project/Villa_Samb-3.jpg";
+// import ImageProjectS4 from "../Style/Images/Project/Villa_Samb-4.jpg";
 
-import ImageProjectS7 from "../Style/Images/Project/Villa_Samb-7.jpg";
-import ImageProjectS10 from "../Style/Images/Project/Villa_Samb-8.jpg";
+// import ImageProjectS7 from "../Style/Images/Project/Villa_Samb-7.jpg";
+// import ImageProjectS10 from "../Style/Images/Project/Villa_Samb-8.jpg";
 
-import ImageProjectT2 from "../Style/Images/Project/Villa-Onomo-2.jpg";
-import ImageProjectT4 from "../Style/Images/Project/Villa-Onomo-4.jpg";
-import ImageProjectT7 from "../Style/Images/Project/Villa-Onomo-7.jpg";
-import ImageProjectT8 from "../Style/Images/Project/Villa-Onomo-8.jpg";
-import ImageProjectT9 from "../Style/Images/Project/Villa-Onomo-9.jpg";
+// import ImageProjectT2 from "../Style/Images/Project/Villa-Onomo-2.jpg";
+// import ImageProjectT4 from "../Style/Images/Project/Villa-Onomo-4.jpg";
+// import ImageProjectT7 from "../Style/Images/Project/Villa-Onomo-7.jpg";
+// import ImageProjectT8 from "../Style/Images/Project/Villa-Onomo-8.jpg";
+// import ImageProjectT9 from "../Style/Images/Project/Villa-Onomo-9.jpg";
 
-import ImageProjectP1 from "../Style/Images/Project/Immeuble-Talles-6.jpg";
+// import ImageProjectP1 from "../Style/Images/Project/Immeuble-Talles-6.jpg";
 
-import ImageProjectBB1 from "../Style/Images/Project/Office-B-1.jpg";
-import ImageProjectBB2 from "../Style/Images/Project/Office-B-2.jpg";
-import ImageProjectBB3 from "../Style/Images/Project/Office-B-3.jpg";
-import ImageProjectBB6 from "../Style/Images/Project/Office-B-6.jpg";
+// import ImageProjectBB1 from "../Style/Images/Project/Office-B-1.jpg";
+// import ImageProjectBB2 from "../Style/Images/Project/Office-B-2.jpg";
+// import ImageProjectBB3 from "../Style/Images/Project/Office-B-3.jpg";
+// import ImageProjectBB6 from "../Style/Images/Project/Office-B-6.jpg";
 
-import ImageProjectQ1 from "../Style/Images/Project/Villa-Sarr-1.jpg";
-import ImageProjectQ10 from "../Style/Images/Project/Villa-Sarr-10.jpg";
+// import ImageProjectQ1 from "../Style/Images/Project/Villa-Sarr-1.jpg";
+// import ImageProjectQ10 from "../Style/Images/Project/Villa-Sarr-10.jpg";
 
 function Accueil({ GetImageToApp }) {
   useEffect(() => {
