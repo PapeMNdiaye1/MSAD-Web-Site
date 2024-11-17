@@ -66,8 +66,8 @@ function Accueil({ GetImageToApp }) {
       hoverLoaderContainer.style.display = "";
     }, 1500);
 
-    // let TheFooter = document.querySelector(".the_footer");
-    // TheFooter.style.opacity = "1";
+    let TheFooter = document.querySelector(".the_footer");
+    TheFooter.style.opacity = "1";
 
     // let ThesliderImg = document.querySelectorAll(".slider");
     // let thePageWidth = window.innerWidth;
@@ -84,8 +84,8 @@ function Accueil({ GetImageToApp }) {
 
   return (
     <div id="Accueil">
-      <div className="Accueil_Slider-2">
-        {/* <Carousel>
+      {/* <div className="Accueil_Slider-2"> */}
+      {/* <Carousel>
           <div className="sliders">
             <img loading="lazy" src={ImageforIntro1} />
             <div className="sliders_inner_container">
@@ -135,7 +135,7 @@ function Accueil({ GetImageToApp }) {
             </div>
           </div>
         </Carousel> */}
-      </div>
+      {/* </div> */}
 
       {/* <AccueilSlider /> */}
       {/* <section className="archviz_presantation">
@@ -181,7 +181,7 @@ function Accueil({ GetImageToApp }) {
           title={"Visualisation de projets immobiliers"}
           image={ImageProjectQ1}
           description={`Visualisez et concrétisez vos projets d'aménagement grâce à l'accompagnement de nos architectes d'intérieur.`}
-          color={"#f1f1f1"}
+          color={"#F2F1F0"}
           textcolor={"#000"}
           theKey={1}
           link={"/VillaSarr"}
@@ -196,7 +196,7 @@ function Accueil({ GetImageToApp }) {
             "À l'aide des logiciels de dernière génération et de notre savoir-faire dans le domaine de l’architecture d’intérieur. Nous vous aidons dans l’aménagement de vos espaces."
           }
           color={"#8a6f54"}
-          textcolor={"#f1f1f1"}
+          textcolor={"#F2F1F0"}
           theKey={2}
           link={"/Appartement-F4-A"}
           side={"left"}
@@ -208,7 +208,7 @@ function Accueil({ GetImageToApp }) {
           title={"Création de plan isométrique"}
           image={ImageProjectP1}
           description={`Les plans d'étage isométriques offrent une vue en trois dimensions des configurations d'un bien immobilier, aidant les clients à mieux comprendre la disposition spatiale et la fonctionnalité des différentes zones.`}
-          color={"#F1F1F1"}
+          color={"#F2F1F0"}
           textcolor={"#222"}
           theKey={3}
           link={"/Immeuble-Talles"}
@@ -223,7 +223,7 @@ function Accueil({ GetImageToApp }) {
             "Des designs Modernes et épurés. Nous mettons en œuvre différentes approches pour une optimisation de vos espaces extérieurs et intérieurs. Pour se faire nous utilisons différents logiciels avec les dernières innovations pour des rendus d’images à la fois réalistes et immersives."
           }
           color={"#2b2828"}
-          textcolor={"#f1f1f1"}
+          textcolor={"#F2F1F0"}
           theKey={4}
           link={"/Villa"}
           side={"left"}
@@ -250,7 +250,7 @@ function Accueil({ GetImageToApp }) {
           image={ImageProjectS1}
           description={`Visualisez et concrétisez vos projets d'aménagement grâce à l'accompagnement de nos architectes d'intérieur.`}
           color={"#2b2828"}
-          textcolor={"#f1f1f1"}
+          textcolor={"#F2F1F0"}
           theKey={6}
           link={"/VillaSamb"}
           The_Experience={false}
@@ -263,7 +263,7 @@ function Accueil({ GetImageToApp }) {
           description={
             "Ce projet comprend des villas familiales, des bâtiments commerciaux et résidentiels ainsi que des lieux publics. Notre travail se partage à parts égales entre les animations architecturales et les rendus 3D. Nous mettons en œuvre différentes approches pour une optimisation de vos espaces extérieurs et intérieurs."
           }
-          color={"#F1F1F1"}
+          color={"#F2F1F0"}
           textcolor={"#222"}
           theKey={7}
           link={"/City1"}
@@ -307,7 +307,7 @@ function Accueil({ GetImageToApp }) {
             "Visualisez votre bureau avant de le construire. La modélisation 3D vous permet d'explorer les agencements, le placement des meubles et les éléments de design, le tout virtuellement."
           }
           color={"#222"}
-          textcolor={"#f1f1f1"}
+          textcolor={"#F2F1F0"}
           theKey={10}
           link={"/Design_Bureau"}
           The_Experience={false}
@@ -528,21 +528,25 @@ function TheFooter({}) {
       <div className="titles">Categories</div>
       <div className="titles">Contacts</div>
       <div className="titles">Reseaux</div>
-      <div className="titles">Formation</div>
+      <div className="titles">Localisation</div>
 
-      <Link
-        to={"/formation"}
-        // href="https://archviz-dakar.com/Formation"
-        // target="_blank"
-        className="portfolio_link"
-      >
-        Voir infos <ion-icon name="arrow-forward-outline"></ion-icon>
-      </Link>
+      <div className="map_container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5455.42053838333!2d-16.933987558810305!3d14.79352301408105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1bf95a21fe7ad%3A0xdf1f039fc3b95515!2sManufacture%20S%C3%A9n%C3%A9galaise%20Des%20Arts%20D%C3%A9coratifs%20MSAD!5e0!3m2!1sfr!2ssn!4v1731848071289!5m2!1sfr!2ssn"
+          width="100%"
+          height="100%"
+          style={{ border: "0" }}
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
 
       <p className="archviz_description">
-        Nous aidons les constructeur et les promoteurs immobiliers à
-        impressionner les investisseurs et les acheteurs avec des visuels
-        professionnels.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+        mollitia, molestiae quas vel sint commodi repudiandae consequuntur
+        voluptatum laborum numquam blanditiis harum quisquam eius sed odit
+        fugiat iusto fuga praesentium optio
       </p>
 
       <nav className="menu_elemant_container">
@@ -563,32 +567,32 @@ function TheFooter({}) {
 
       <div className="categories_elemant_container">
         <div className="categories_elemant">
-          <ion-icon name="ellipse"></ion-icon>Exterior Design
+          <ion-icon name="ellipse"></ion-icon>-----------
         </div>
         <div className="categories_elemant">
-          <ion-icon name="ellipse"></ion-icon>Interior Design
+          <ion-icon name="ellipse"></ion-icon>-----------
         </div>
         <div className="categories_elemant">
-          <ion-icon name="ellipse"></ion-icon>Creation de Maquette
+          <ion-icon name="ellipse"></ion-icon>-----------
         </div>
         <div className="categories_elemant">
-          <ion-icon name="ellipse"></ion-icon>Visualisation
+          <ion-icon name="ellipse"></ion-icon>-----------
         </div>
         <div className="categories_elemant">
-          <ion-icon name="ellipse"></ion-icon>Creation de Visite Web
+          <ion-icon name="ellipse"></ion-icon>-----------
         </div>
         <div className="categories_elemant">
-          <ion-icon name="ellipse"></ion-icon>Experience de Realite Virtuel
+          <ion-icon name="ellipse"></ion-icon>-----------
         </div>
       </div>
 
       <div className="contact_elemant_container">
-        <div className="contact_elemant ">Tel: +221 77 727 86 55</div>
-        <div className="contact_elemant ">Tel: +221 77 355 88 44</div>
-        <div className="contact_elemant ">archviz.sn@gmail.com</div>
+        <div className="contact_elemant ">Tel: +221 77 777 77 77</div>
+        <div className="contact_elemant ">Tel: +221 77 777 77 77</div>
+        <div className="contact_elemant ">XXXXXXXX@gmail.com</div>
       </div>
 
-      <div className="network_container">
+      {/* <div className="network_container">
         <a href="https://www.instagram.com/archviz_dakar/" target="_blank">
           <div className="network">
             <ion-icon name="logo-instagram"></ion-icon>
@@ -628,14 +632,14 @@ function TheFooter({}) {
             <ion-icon name="logo-youtube"></ion-icon>
           </div>
         </a>
-      </div>
+      </div> */}
 
       <div className="the_line"></div>
 
       <div className="country">
         <ion-icon name="globe-outline"></ion-icon> Sénégal
       </div>
-      <div className="rights">© 2024 | Archviz. Tout droit réservé.</div>
+      <div className="rights">© 2024 | MSAD. Tout droit réservé.</div>
     </footer>
   );
 }

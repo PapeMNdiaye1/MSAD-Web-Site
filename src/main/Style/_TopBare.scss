@@ -50,38 +50,29 @@
         font-size: 0.9em;
       }
       .One-Section-B {
+        font-family: "PT Serif", serif;
         text-decoration: none;
-        margin: 0vw 1vw;
+        // margin: 0vw 1vw;
+        height: 100%;
+        padding: 0em 1em;
+
+        @include cent();
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         .One-slider-Section-B {
           position: relative;
-          transition-duration: 0.5s;
-          height: 100%;
-          // background-color: aqua;
-
-          .Top-Title {
-            width: 100%;
-            height: 100%;
-            @include cent();
-
-            div {
-              font-family: "Montserrat", sans-serif;
-              color: #000;
-              text-decoration: none;
-              font-size: 0.9em;
-              font-weight: 300;
-              // background-color: salmon;
-            }
-          }
-
-          .bottom-Title {
-            width: 100%;
-            opacity: 0;
-            transition-duration: 0.3s;
-            div {
-              font-family: "Montserrat", sans-serif;
-              color: #000;
-            }
-          }
+          margin: auto;
+          font-weight: 100;
+          color: #1f1f1f;
+          text-decoration: none;
+          transform: scale(1);
+        }
+        .One-slider-Section-B-active {
+          // color: red;
+          transform: scale(1.1);
+          font-weight: 400;
         }
       }
     }
@@ -93,7 +84,7 @@
     @include cent;
     cursor: pointer;
     margin-right: 1.5em;
-    // display: none;
+    display: none;
 
     .Menu {
       width: 2.3em;
@@ -161,7 +152,7 @@
   transition-property: top, opacity;
   @include cent();
   flex-direction: column;
-  background-color: rgba(#f1f1f1, 0.97);
+  background-color: rgba(#f2f1f0, 0.97);
 
   .Menu-container {
     width: 30em;
@@ -201,35 +192,34 @@
         position: relative;
         top: -0%;
         transition-duration: 0.5s;
-        // background-color: salmon;
-
+        text-decoration: none;
         .Top-Title {
           width: 100%;
           height: 3.5em;
           @include cent();
-
           div {
-            font-family: "Montserrat", sans-serif;
-            font-size: 3.5em;
-            font-weight: 900;
-            color: #000;
+            // font-family: "Montserrat", sans-serif;
+            font-family: "PT Serif", serif;
+            font-size: 3em;
+            font-weight: 100;
+            color: #1f1f1f;
           }
         }
 
-        .bottom-Title {
-          width: 100%;
-          height: 3.5em;
-          @include cent();
-          opacity: 0;
-          transition-duration: 0.3s;
+        // .bottom-Title {
+        //   width: 100%;
+        //   height: 3.5em;
+        //   @include cent();
+        //   opacity: 0;
+        //   transition-duration: 0.3s;
 
-          div {
-            font-family: "Montserrat", sans-serif;
-            font-size: 3.5em;
-            font-weight: 900;
-            color: #000;
-          }
-        }
+        //   div {
+        //     font-family: "Montserrat", sans-serif;
+        //     font-size: 3.5em;
+        //     font-weight: 900;
+        //     color: #000;
+        //   }
+        // }
       }
     }
   }

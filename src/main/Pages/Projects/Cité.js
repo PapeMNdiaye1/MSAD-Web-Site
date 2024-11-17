@@ -35,7 +35,7 @@ function City1({}) {
     }, 1500);
 
     return () => {
-      Page_slider.style.opacity = `1`;
+      //Page_slider.style.opacity = `1`;
       ToDisplayonBLoade.style.display = "flex";
       AccueilContainer.scrollTop = 0;
     };

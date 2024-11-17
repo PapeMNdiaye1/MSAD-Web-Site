@@ -102,7 +102,7 @@ function TopBare({ onChangeTab }) {
             title={"CONTACT"}
           />
         </nav>
-        <div className="network_container">
+        {/* <div className="network_container">
           <a href="https://www.instagram.com/archviz_dakar/" target="_blank">
             <div className="network">
               <ion-icon name="logo-instagram"></ion-icon>
@@ -124,13 +124,12 @@ function TopBare({ onChangeTab }) {
               <ion-icon name="mail-outline"></ion-icon>
             </div>
           </a>
-        </div>
+        </div> */}
       </div>
     </Fragment>
   );
 }
 
-//!###################################################
 //!###################################################
 //!###################################################
 function OneSection({ title, parentCallback, link }) {
@@ -160,35 +159,33 @@ function OneSection({ title, parentCallback, link }) {
 
   const onClickOnTab = (e) => {
     parentCallback(title, link);
-    e.target.childNodes[0].style.top = "";
-    e.target.childNodes[0].childNodes[1].style.opacity = "";
     let Menu_slider = document.querySelector("#Top-bare-slider-container");
     let theMenu = document.querySelector(".Menu");
     let allMenuSection = document.querySelectorAll(".One-Section");
-    theMenu.classList.remove("Menu_On");
-    Menu_slider.style.top = "";
-    Menu_slider.style.opacity = "";
 
-    for (let i = 0; i < allMenuSection.length; i++) {
-      allMenuSection[i].style.top = ``;
-      allMenuSection[i].style.opacity = `0`;
+    if (theMenu.classList.length > 1) {
+      theMenu.classList.remove("Menu_On");
+      Menu_slider.style.top = "";
+      Menu_slider.style.opacity = "";
+      for (let i = 0; i < allMenuSection.length; i++) {
+        allMenuSection[i].style.top = ``;
+        allMenuSection[i].style.opacity = `0`;
+      }
+    } else {
+      Menu_slider.style.top = "4em";
+      Menu_slider.style.opacity = "1";
+      theMenu.classList.add("Menu_On");
+
+      for (let i = 0; i < allMenuSection.length; i++) {
+        allMenuSection[i].style.top = `1%`;
+        allMenuSection[i].style.opacity = `1`;
+      }
     }
-    let AccueilContainer = document.querySelector(".App_container");
-    AccueilContainer.scrollTop = 0;
   };
 
-  // const onMouseOverTitle = (e) => {
-  //   e.target.childNodes[0].style.top = "-100%";
-  //   e.target.childNodes[0].childNodes[1].style.opacity = ".7";
-  //   e.target.childNodes[0].childNodes[1].style.opacity = ".7";
-  // };
-  // const onMouseOutTitle = (e) => {
-  //   e.target.childNodes[0].style.top = "";
-  //   e.target.childNodes[0].childNodes[1].style.opacity = "";
-  // };
   return (
     <Fragment>
-      <Link to={TheLink} className="One-Section">
+      <Link to={TheLink} onClick={onClickOnTab} className="One-Section">
         <div className="One-slider-Section">
           <div className="Top-Title">
             <div>{title}</div>
@@ -198,6 +195,8 @@ function OneSection({ title, parentCallback, link }) {
     </Fragment>
   );
 }
+
+//!###################################################
 
 function OneSectionB({ title, parentCallback, link }) {
   const [TheLink, setTheLink] = useState("/");
@@ -226,41 +225,47 @@ function OneSectionB({ title, parentCallback, link }) {
 
   const onClickOnTab = (e) => {
     parentCallback(title, link);
-    e.target.childNodes[0].style.top = "";
-    e.target.childNodes[0].childNodes[1].style.opacity = "";
-    let Menu_slider = document.querySelector("#Top-bare-slider-container");
-    let theMenu = document.querySelector(".Menu");
-    let allMenuSection = document.querySelectorAll(".One-Section");
-    theMenu.classList.remove("Menu_On");
-    Menu_slider.style.top = "";
-    Menu_slider.style.opacity = "";
+    console.log(e);
+
+    // e.target.childNodes[0].childNodes[1].style.opacity = "";
+    // let Menu_slider = document.querySelector("#Top-bare-slider-container");
+    // let theMenu = document.querySelector(".Menu");
+    let allMenuSection = document.querySelectorAll(".One-slider-Section-B");
+    console.log(allMenuSection);
 
     for (let i = 0; i < allMenuSection.length; i++) {
-      allMenuSection[i].style.top = ``;
-      allMenuSection[i].style.opacity = `0`;
+      //  .style.color = "";
+      // console.log(allMenuSection[i]);
+      allMenuSection[i].classList.remove("One-slider-Section-B-active");
     }
-    let AccueilContainer = document.querySelector(".App_container");
-    AccueilContainer.scrollTop = 0;
+    // e.target.style.color = "red";
+    e.target.classList.add("One-slider-Section-B-active");
+    // let AccueilContainer = document.querySelector(".App_container");
+    // AccueilContainer.scrollTop = 0;
   };
 
-  // const onMouseOverTitle = (e) => {
-  //   e.target.childNodes[0].style.top = "-100%";
-  //   e.target.childNodes[0].childNodes[1].style.opacity = ".7";
-  //   e.target.childNodes[0].childNodes[1].style.opacity = ".7";
-  // };
-  // const onMouseOutTitle = (e) => {
-  //   e.target.childNodes[0].style.top = "";
-  //   e.target.childNodes[0].childNodes[1].style.opacity = "";
-  // };
+  const onMouseOverTitle = (e) => {
+    e.target.style.transform = "scale(1.1)";
+    // e.target.classList.add("One-slider-Section-B-active");
+  };
+
+  const onMouseOutTitle = (e) => {
+    e.target.style.transform = "";
+    // e.target.classList.remove("One-slider-Section-B-active");
+  };
   return (
     <Fragment>
-      <Link to={TheLink} className="One-Section-B">
-        <div className="One-slider-Section-B">
-          <div className="Top-Title">
-            <div>{title}</div>
-          </div>
-        </div>
-      </Link>
+      <div className="One-Section-B">
+        <Link
+          to={TheLink}
+          onClick={onClickOnTab}
+          onMouseOver={onMouseOverTitle}
+          onMouseOut={onMouseOutTitle}
+          className="One-slider-Section-B"
+        >
+          {title}
+        </Link>
+      </div>
     </Fragment>
   );
 }

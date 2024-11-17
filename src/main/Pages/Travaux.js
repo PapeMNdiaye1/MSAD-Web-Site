@@ -23,6 +23,17 @@ const Travaux = () => {
   useEffect(() => {
     console.log("opp Travaux");
     let ToDisplayonBLoade = document.querySelector(".before-loader");
+
+    // let TopBareSliderContainer = document.querySelector(
+    //   "#Top-bare-slider-container"
+    // );
+    // let MuneBurger = document.querySelector(".Menu");
+    // MuneBurger.classList.remove("Menu_On");
+
+    // console.log(MuneBurger);
+    // TopBareSliderContainer.style.top = "";
+    // TopBareSliderContainer.style.opacity = "";
+
     ToDisplayonBLoade.style.display = "none";
 
     let AccueilContainer = document.querySelector(".App_container");

@@ -92,7 +92,7 @@ function Services({}) {
             />
           </div>
         }
-        color={"#F1F1F1"}
+        color={"#F2F1F0"}
       />
       <OneService
         theServiceTitle={"Réalité Virtuel et Experience 3D Web"}
