@@ -54,18 +54,18 @@ function TopBare({ onChangeTab }) {
             />
             <OneSectionB
               parentCallback={callback}
+              link={"/Historique"}
+              title={"HISTORIQUE"}
+            />
+            <OneSectionB
+              parentCallback={callback}
               link={"/Travaux"}
               title={"TRAVAUX"}
             />
             <OneSectionB
               parentCallback={callback}
-              link={"/Gallery"}
-              title={"GALERIE"}
-            />
-            <OneSectionB
-              parentCallback={callback}
-              link={"/Services"}
-              title={"SERVICES"}
+              link={"/Articles"}
+              title={"ARTICLES"}
             />
             <OneSectionB
               parentCallback={callback}
@@ -88,13 +88,13 @@ function TopBare({ onChangeTab }) {
           />
           <OneSection
             parentCallback={callback}
-            link={"/Gallery"}
-            title={"GALERIE"}
+            link={"/Articles"}
+            title={"ARTICLES"}
           />
           <OneSection
             parentCallback={callback}
-            link={"/Services"}
-            title={"SERVICES"}
+            link={"/Historique"}
+            title={"HISTORIQUE"}
           />
           <OneSection
             parentCallback={callback}
@@ -102,29 +102,6 @@ function TopBare({ onChangeTab }) {
             title={"CONTACT"}
           />
         </nav>
-        {/* <div className="network_container">
-          <a href="https://www.instagram.com/archviz_dakar/" target="_blank">
-            <div className="network">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </div>
-          </a>
-          <a
-            href="https://api.whatsapp.com/send?phone=221777278655&text=Message provenant de ArchViz.sn"
-            target="_blank"
-          >
-            <div className="network">
-              <ion-icon name="logo-whatsapp"></ion-icon>
-            </div>
-          </a>
-          <a
-            href="mailto:archviz.sn@gmail.com?subject=Message provenant de ArchViz.sn"
-            target="_blank"
-          >
-            <div className="network">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-          </a>
-        </div> */}
       </div>
     </Fragment>
   );
@@ -143,14 +120,11 @@ function OneSection({ title, parentCallback, link }) {
       case "TRAVAUX":
         setTheLink("/Travaux");
         break;
-      case "SERVICES":
-        setTheLink("/Services");
+      case "HISTORIQUE":
+        setTheLink("/Historique");
         break;
-      case "GALERIE":
-        setTheLink("/Galerie");
-        break;
-      case "CONTACT":
-        setTheLink("/Contact");
+      case "ARTICLES":
+        setTheLink("/Articles");
         break;
       default:
         setTheLink("/");
@@ -209,11 +183,11 @@ function OneSectionB({ title, parentCallback, link }) {
       case "TRAVAUX":
         setTheLink("/Travaux");
         break;
-      case "SERVICES":
-        setTheLink("/Services");
+      case "HISTORIQUE":
+        setTheLink("/Historique");
         break;
-      case "GALERIE":
-        setTheLink("/Galerie");
+      case "ARTICLES":
+        setTheLink("/Articles");
         break;
       case "CONTACT":
         setTheLink("/Contact");

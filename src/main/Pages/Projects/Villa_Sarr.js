@@ -69,7 +69,7 @@ function SmallHouse1({}) {
           <p>
             Notre équipe d'experts est là pour vous accompagner à chaque étape
             de vos projets, de la conception à la réalisation. Nous offrons des
-            services personnalisés afin de répondre à toutes vos attentes.
+            Historique personnalisés afin de répondre à toutes vos attentes.
           </p>
           <div className="TheImageContainer">
             <img onClick={displayImage} src={ImageProjectC1} width="100%" />

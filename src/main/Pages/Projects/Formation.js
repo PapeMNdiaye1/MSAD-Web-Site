@@ -28,7 +28,7 @@ function SmallHouse1({}) {
     let hoverLoaderContainer = document.querySelector(
       ".hover_loader_container"
     );
-    hoverLoaderContainer.style.display = "flex";
+    hoverLoaderContainer.style.diplay = "flex";
 
     setTimeout(function () {
       hoverLoaderContainer.style.display = "";
@@ -133,7 +133,7 @@ function SmallHouse1({}) {
           </h1>
 
           <h1 className="project_title-2">
-            DÉBUT DE LA FORMATION <br />4 JANVIER 11:00 AM – 12:30 AM
+            DÉBUT DE LA FORMATION <br />4 JANVIER 10:00 AM – 11:30 AM
           </h1>
 
           <div className="prix ins-prix">

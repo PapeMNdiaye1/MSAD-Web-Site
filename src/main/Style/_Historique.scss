@@ -1,0 +1,20 @@
+@mixin cent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Historique {
+  width: 100%;
+  height: auto;
+  min-height: 200%;
+  z-index: 1;
+  background-color: seagreen;
+}
+
+//!########################################
+
+@media all and (max-width: 1000px) {
+  #Historique {
+  }
+}

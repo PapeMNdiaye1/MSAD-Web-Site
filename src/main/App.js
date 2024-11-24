@@ -4,9 +4,9 @@ import { Routes, BrowserRouter, Route } from "react-router-dom";
 
 import { Accueil } from "./Pages/Accueil";
 import { TheFooter } from "./Pages/Accueil";
-import Service from "./Pages/Service";
+import Historique from "./Pages/Historique";
 import Travaux from "./Pages/Travaux";
-import Gallery from "./Pages/Galerie";
+import Articles from "./Pages/Articles";
 
 const TopBare = React.lazy(() => import("./TopBare"));
 const Contact = React.lazy(() => import("./Pages/Contact"));
@@ -55,7 +55,9 @@ const Pharmacie1 = React.lazy(() => import("./Pages/Projects/Pharmacie_1"));
 const Gym = React.lazy(() => import("./Pages/Projects/Gym"));
 const City1 = React.lazy(() => import("./Pages/Projects/Cité"));
 const Villa = React.lazy(() => import("./Pages/Projects/Villa_A"));
-const Villa_Saly = React.lazy(() => import("./Pages/Projects/Villa_B"));
+const ChaîneDeTravail = React.lazy(() =>
+  import("./Pages/Projects/Chaîne_De_Travail")
+);
 const VillaTerangaAlAmin = React.lazy(() =>
   import("./Pages/Projects/Villa_Teranga_Al_Amin")
 );
@@ -96,19 +98,8 @@ function App() {
               element={<Accueil GetImageToApp={GetImage} />}
             />
             <Route exact path="/Travaux" element={<Travaux />} />
-            <Route
-              exact
-              path="/Galerie"
-              element={
-                <Gallery
-                  TheImageToGallery={TheImage}
-                  TheTitleToGallery={TheTitle}
-                  TheDateToGallery={TheDate}
-                  TheLinkToGallery={TheLink}
-                />
-              }
-            />
-            <Route exact path="/Services" element={<Service />} />
+            <Route exact path="/Articles" element={<Articles />} />
+            <Route exact path="/Historique" element={<Historique />} />
 
             <Route
               exact
@@ -205,10 +196,10 @@ function App() {
             />
             <Route
               exact
-              path="/Villa-Saly"
+              path="/Chaîne-De-Travail"
               element={
                 <Suspense fallback={<TheLoader />}>
-                  <Villa_Saly />
+                  <ChaîneDeTravail />
                 </Suspense>
               }
             />

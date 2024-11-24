@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-// import ImageforIntro1 from "../Style/Images/Project/Exterior-0.jpg";
+import ImageforIntro1 from "../Style/Images/Project/Image-1.jpg";
+import Tableau1 from "../Style/Images/Tableaux/JOMBAJO DE KALIDOU KASSE.jpg";
 // import ImageforIntro4 from "../Style/Images/Project/Pharmacie-3.jpg";
 
 // import ImageProjectB1 from "../Style/Images/Project/City-8.jpg";
@@ -70,7 +71,7 @@ function Accueil({ GetImageToApp }) {
     TheFooter.style.opacity = "1";
 
     // let ThesliderImg = document.querySelectorAll(".slider");
-    // let thePageWidth = window.innerWidth;
+    // let thePageWidth = wipndow.innerWidth;
 
     return () => {
       ToDisplayonBLoade.style.display = "flex";
@@ -84,6 +85,41 @@ function Accueil({ GetImageToApp }) {
 
   return (
     <div id="Accueil">
+      <div id="Section-1">
+        <img loading="lazy" src={ImageforIntro1} width="100%" />
+        <div className="hover-the-image"></div>
+        <div className="text-hover-container">
+          <div className="SeeArticle">View Exhibition</div>
+          <h1>Manufactures Sénégalaises Des Arts Décoratifs De Thiés</h1>
+          <div className="SeeMoreBtn">Voir Plus</div>
+        </div>
+      </div>
+      <div id="Section-2">
+        <div className="text-container">
+          <h3>About the museum</h3>
+          <h2>We Combine Classic & Modern Arts</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum.
+          </p>
+        </div>
+        <div className="image-container">
+          <img loading="lazy" src={Tableau1} />
+        </div>
+      </div>
+      <div id="Section-3">
+        <div className="text-container">
+          <h2>Exhibitions</h2>
+        </div>
+        <div className="box-1"></div>
+        <div className="box-2"></div>
+      </div>
+      <div id="Section-4">
+        <div className="image-1"></div>
+        {/* <img loading="lazy" src={""} /> */}
+      </div>
       {/* <div className="Accueil_Slider-2"> */}
       {/* <Carousel>
           <div className="sliders">
@@ -297,7 +333,7 @@ function Accueil({ GetImageToApp }) {
           The_Experience_Link={"https://villa-r-1.netlify.app/"}
           theKey={9}
           side={"right"}
-          link={"/Villa-Saly"}
+          link={"/Chaîne-De-Travail"}
         />
 
         <OneBigProject
@@ -321,13 +357,13 @@ function Accueil({ GetImageToApp }) {
         <div className="galerie_container">Catalogue</div>
       </section> */}
 
-      {/* <TheGallery GetImageOnAccueil={GetImageOnApp} /> */}
+      {/* <TheArticles GetImageOnAccueil={GetImageOnApp} /> */}
     </div>
   );
 }
 
 //!###############################################################
-function TheGallery({ GetImageOnAccueil }) {
+function TheArticles({ GetImageOnAccueil }) {
   const onClickOnImage = (theimage, title, date, link) => {
     GetImageOnAccueil(theimage, title, date, link);
   };
@@ -335,7 +371,7 @@ function TheGallery({ GetImageOnAccueil }) {
   return <div className="the_galerie_container"></div>;
 }
 //!###############################################################
-function OneGalerieElement({ giveImageId, title, theKey, image, date, link }) {
+function OneArticlesElement({ giveImageId, title, theKey, image, date, link }) {
   const clickOnImage = (e) => {
     let AccueilContainer = document.querySelector(".App_container");
     AccueilContainer.scrollTop = 0;
@@ -347,7 +383,7 @@ function OneGalerieElement({ giveImageId, title, theKey, image, date, link }) {
       <img loading="lazy" src={image} width="100%" alt={title} />
       <div className="one_galerie_element_hover">
         <div className="iner_container">
-          <Link onClick={clickOnImage} to={"/Galerie"}>
+          <Link onClick={clickOnImage} to={"/Articles"}>
             <div className="Icon-to-click-on">
               <ion-icon name="expand-sharp"></ion-icon>
             </div>
@@ -556,11 +592,15 @@ function TheFooter({}) {
         <Link className="menu_elemant" to={"/Travaux"} onClick={onClickOnTab}>
           Travaux
         </Link>
-        <Link className="menu_elemant" to={"/Services"} onClick={onClickOnTab}>
-          Services
+        <Link
+          className="menu_elemant"
+          to={"/Historique"}
+          onClick={onClickOnTab}
+        >
+          Historique
         </Link>
-        <Link className="menu_elemant" to={"/Galerie"} onClick={onClickOnTab}>
-          Galerie
+        <Link className="menu_elemant" to={"/Articles"} onClick={onClickOnTab}>
+          Articles
         </Link>
         <div className="menu_elemant"></div>
       </nav>
@@ -644,4 +684,4 @@ function TheFooter({}) {
   );
 }
 
-export { Accueil, TheGallery, OneBigProject, TheFooter };
+export { Accueil, TheArticles, OneBigProject, TheFooter };

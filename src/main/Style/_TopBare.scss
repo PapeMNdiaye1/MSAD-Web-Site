@@ -6,13 +6,13 @@
 
 #Top-Bare {
   width: 100%;
-  height: 4em;
+  height: 4.1em;
   background-color: var(--color0);
   position: absolute;
   z-index: 4000;
   @include cent;
   justify-content: flex-end;
-  border-bottom: 0.051em solid rgba(0, 0, 0, 0.51);
+  // border-bottom: 0.021em solid rgba(0, 0, 0, 0.51);
 
   .logo-container {
     width: 4em;
@@ -50,8 +50,9 @@
         font-size: 0.9em;
       }
       .One-Section-B {
-        font-family: "PT Serif", serif;
+        // font-family: "PT Serif", serif;
         text-decoration: none;
+        font-family: "Playfair Display", serif;
         // margin: 0vw 1vw;
         height: 100%;
         padding: 0em 1em;
