@@ -18,6 +18,18 @@ function Articles({
   const [LoadArticlesContainer, setLoadArticlesContainer] = useState(false);
 
   useEffect(() => {
+    let ThePageTitle = document.querySelectorAll(".One-slider-Section-B");
+
+    ThePageTitle.forEach((e) => {
+      e.style.color = "";
+      e.style.color = "";
+      e.style.fontWeight = "";
+    });
+
+    ThePageTitle[3].style.transform = "scale(1.1)";
+    ThePageTitle[3].style.color = "#C9A050";
+    ThePageTitle[3].style.fontWeight = "400";
+
     let ToDisplayonBLoade = document.querySelector(".before-loader");
     ToDisplayonBLoade.style.display = "none";
 

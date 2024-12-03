@@ -21,6 +21,18 @@ import { React, useEffect } from "react";
 
 const Travaux = () => {
   useEffect(() => {
+    let ThePageTitle = document.querySelectorAll(".One-slider-Section-B");
+
+    ThePageTitle.forEach((e) => {
+      e.style.color = "";
+      e.style.color = "";
+      e.style.fontWeight = "";
+    });
+
+    ThePageTitle[2].style.transform = "scale(1.1)";
+    ThePageTitle[2].style.color = "#C9A050";
+    ThePageTitle[2].style.fontWeight = "400";
+
     console.log("opp Travaux");
     let ToDisplayonBLoade = document.querySelector(".before-loader");
 

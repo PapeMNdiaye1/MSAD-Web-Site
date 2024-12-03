@@ -1,13 +1,13 @@
 .the_footer {
   width: auto;
-  height: 40em;
+  height: 35em;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(13, 1fr);
   padding-left: 5em;
   padding-right: 5em;
   padding-top: 2em;
-  background-color: --colorX;
+  background-color: #13130d;
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
   font-weight: 800;
@@ -40,6 +40,7 @@
     justify-content: flex-start;
     align-items: flex-end;
     margin-left: 20%;
+    color: #c9a050;
   }
 
   .titles:nth-child(4) {
@@ -146,7 +147,8 @@
       justify-content: flex-start;
       align-items: flex-end;
       font-size: 0.7em;
-      color: rgb(104, 104, 104);
+      // color: rgb(104, 104, 104);
+      color: #c9a050;
     }
   }
 

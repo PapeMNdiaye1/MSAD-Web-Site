@@ -7,12 +7,12 @@
 #Top-Bare {
   width: 100%;
   height: 4.1em;
-  background-color: var(--color0);
+  background-color: #eeede0;
   position: absolute;
   z-index: 4000;
   @include cent;
   justify-content: flex-end;
-  // border-bottom: 0.021em solid rgba(0, 0, 0, 0.51);
+  border-bottom: 0.001em solid rgba(0, 0, 0, 0.51);
 
   .logo-container {
     width: 4em;
@@ -71,7 +71,6 @@
           transform: scale(1);
         }
         .One-slider-Section-B-active {
-          // color: red;
           transform: scale(1.1);
           font-weight: 400;
         }
@@ -97,8 +96,8 @@
       &::before {
         content: "";
         position: absolute;
-        top: calc(40% - 0.1em);
         left: 25%;
+        top: calc(40% - 0.1em);
         width: 50%;
         height: 0.15em;
         background-color: var(--colorX);
@@ -108,8 +107,8 @@
       &::after {
         content: "";
         position: absolute;
-        top: calc(60% - 0.1em);
         left: 25%;
+        top: calc(60% - 0.1em);
         width: 50%;
         height: 0.15em;
         background-color: var(--colorX);
@@ -120,7 +119,6 @@
         background-color: rgba($color: #222, $alpha: 0.1);
       }
     }
-
     .Menu_On {
       background-color: rgba($color: #222, $alpha: 0);
 
@@ -128,12 +126,10 @@
         transform: rotate(-45deg);
         top: calc(50% - 0.1em);
       }
-
       &::after {
         transform: rotate(45deg);
         top: calc(50% - 0.1em);
       }
-
       &:hover {
         background-color: rgba($color: #222, $alpha: 0.1);
       }
@@ -177,8 +173,8 @@
       &::after {
         content: "";
         position: absolute;
-        top: 0%;
         left: 0%;
+        top: 0%;
         background-color: var(--colorX);
         width: 100%;
         height: 100%;
@@ -243,11 +239,9 @@
         transform: scale(1.5);
         color: #000;
       }
-
       &:active {
         transform: scale(0.9);
       }
-
       .network {
         width: 1em;
         height: 1em;
@@ -286,28 +280,23 @@
           height: 0.12em;
           top: calc(40% - 0em);
         }
-
         &::after {
           top: calc(60% - 0em);
           height: 0.12em;
         }
-
         &:hover {
           background-color: rgba($color: #222, $alpha: 0);
         }
       }
-
       .Menu_On {
         &::before {
           transform: rotate(-45deg);
           top: calc(50% - 0.1em);
         }
-
         &::after {
           transform: rotate(45deg);
           top: calc(50% - 0.1em);
         }
-
         &:hover {
           background-color: rgba($color: #222, $alpha: 0);
         }

@@ -52,6 +52,18 @@ import Tableau1 from "../Style/Images/Tableaux/JOMBAJO DE KALIDOU KASSE.jpg";
 
 function Accueil({ GetImageToApp }) {
   useEffect(() => {
+    let ThePageTitle = document.querySelectorAll(".One-slider-Section-B");
+
+    ThePageTitle.forEach((e) => {
+      e.style.color = "";
+      e.style.color = "";
+      e.style.fontWeight = "";
+    });
+
+    ThePageTitle[0].style.transform = "scale(1<1)";
+    ThePageTitle[0].style.color = "#C9A050";
+    ThePageTitle[0].style.fontWeight = "400";
+
     let ToDisplayonBLoade = document.querySelector(".before-loader");
     ToDisplayonBLoade.style.display = "none";
 
@@ -70,9 +82,6 @@ function Accueil({ GetImageToApp }) {
     let TheFooter = document.querySelector(".the_footer");
     TheFooter.style.opacity = "1";
 
-    // let ThesliderImg = document.querySelectorAll(".slider");
-    // let thePageWidth = wipndow.innerWidth;
-
     return () => {
       ToDisplayonBLoade.style.display = "flex";
       AccueilContainer.scrollTop = 0;
@@ -89,7 +98,7 @@ function Accueil({ GetImageToApp }) {
         <img loading="lazy" src={ImageforIntro1} width="100%" />
         <div className="hover-the-image"></div>
         <div className="text-hover-container">
-          <div className="SeeArticle">View Exhibition</div>
+          <div className="SeeArticle">Voir Expositions</div>
           <h1>Manufactures Sénégalaises Des Arts Décoratifs De Thiés</h1>
           <div className="SeeMoreBtn">Voir Plus</div>
         </div>
@@ -105,20 +114,68 @@ function Accueil({ GetImageToApp }) {
             et ea rebum.
           </p>
         </div>
-        <div className="image-container">
-          <img loading="lazy" src={Tableau1} />
-        </div>
+        <div className="image-container"></div>
       </div>
       <div id="Section-3">
         <div className="text-container">
           <h2>Exhibitions</h2>
+          <div className="theLine"></div>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua.
+          </p>
         </div>
-        <div className="box-1"></div>
-        <div className="box-2"></div>
+        <div className="box-1">
+          <div className="text-container">
+            <h4>Early History of Jewelry</h4>
+            <div className="bottom-text-container">
+              <em>exhibition</em>
+              <br />
+              12 Jan 2021 - 27 Feb 2021
+            </div>
+          </div>
+          <div className="image-container"></div>
+        </div>
+        <div className="box-2">
+          <div className="text-container">
+            <h4>Early History of Jewelry</h4>
+            <div className="bottom-text-container">
+              <em>exhibition</em>
+              <br />
+              12 Jan 2021 - 27 Feb 2021
+            </div>
+          </div>
+          <div className="image-container"></div>
+        </div>
       </div>
       <div id="Section-4">
         <div className="image-1"></div>
-        {/* <img loading="lazy" src={""} /> */}
+        <div className="image-2"></div>
+        <div className="text-container">
+          <h3>About the museu</h3>
+          <h2>We Combine Classic & Modern Arts</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum.
+          </p>
+        </div>
+      </div>
+      <div id="Section-5">
+        <div className="text-container">
+          <h2>ARTICLES</h2>
+          <div className="theLine"></div>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua.
+          </p>
+        </div>
+        <div className="box-1"></div>
+        <div className="box-2"></div>
+        <div className="box-3"></div>
       </div>
       {/* <div className="Accueil_Slider-2"> */}
       {/* <Carousel>
@@ -581,8 +638,7 @@ function TheFooter({}) {
       <p className="archviz_description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
         mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-        voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-        fugiat iusto fuga praesentium optio
+        voluptatum laborum numquam blanditiis
       </p>
 
       <nav className="menu_elemant_container">

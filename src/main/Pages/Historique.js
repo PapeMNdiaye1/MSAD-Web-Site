@@ -1,8 +1,21 @@
-import { React, useEffect } from "react";
+import { React, useEffect, useState, Fragment } from "react";
 import { Link } from "react-router-dom";
+import ImageProjectP1 from "../Style/Images/Tableaux/DIALA NDAMA ALASSANE M. DIOP.png";
 
 function Historique({}) {
   useEffect(() => {
+    let ThePageTitle = document.querySelectorAll(".One-slider-Section-B");
+
+    ThePageTitle.forEach((e) => {
+      e.style.color = "";
+      e.style.color = "";
+      e.style.fontWeight = "";
+    });
+
+    ThePageTitle[1].style.transform = "scale(1.1)";
+    ThePageTitle[1].style.color = "#C9A050";
+    ThePageTitle[1].style.fontWeight = "400";
+
     let ToDisplayonBLoade = document.querySelector(".before-loader");
     ToDisplayonBLoade.style.display = "none";
 
@@ -27,7 +40,191 @@ function Historique({}) {
     };
   }, []);
 
-  return <div id="Historique"></div>;
+  return (
+    <div id="Historique">
+      <OneBigProject
+        title={"Article-1"}
+        image={ImageProjectP1}
+        description={
+          "Des designs Modernes et épurés. Nous mettons en œuvre différentes approches pour une optimisation de vos espaces extérieurs et intérieurs. Pour se faire nous utilisons différents logiciels avec les dernières innovations pour des rendus d’images à la fois réalistes et immersives."
+        }
+        // color={"#2b2828"}
+        // textcolor={"#f1f1f1"}
+        theKey={1}
+        link={"/Villa"}
+        side={"left"}
+        The_Experience={true}
+        The_Experience_Link={"https://archviz-villa-astan.netlify.app/"}
+      />
+      <OneBigProject
+        title={"Article-2"}
+        image={ImageProjectP1}
+        description={
+          "érents logiciels avec les dernières innovations pour des rendus d’images à la fois réalistes et immersives."
+        }
+        // color={"#2b2828"}
+        // textcolor={"#f1f1f1"}
+        theKey={2}
+        link={"/Villa"}
+        side={"right"}
+        The_Experience={true}
+        The_Experience_Link={"https://archviz-villa-astan.netlify.app/"}
+      />
+    </div>
+  );
+}
+
+//!###############################################################
+function OneBigProject({
+  // color,
+  title,
+  description,
+  side,
+  // textcolor,
+  theKey,
+  image,
+  link,
+  The_Experience,
+  The_Experience_Link,
+}) {
+  const [TheSide, setTheSide] = useState("");
+
+  useEffect(() => {
+    setTheSide(side);
+    let TheSidedProject = document.querySelectorAll(".One_Project_In_Home");
+    // TheSidedProject[theKey - 1].style.backgroundColor = color;
+    // TheSidedProject[theKey - 1].style.border = `.5em solid ${color}`;
+  });
+
+  return (
+    <Fragment>
+      {TheSide === "right" ? (
+        <section className="One_Project_In_Home right">
+          <div
+            // style={{
+            //   color: textcolor,
+            // }}
+            className="info_container "
+          >
+            <h3
+              // style={{
+              //   color: textcolor,
+              // }}
+              className="title"
+            >
+              {title}
+            </h3>
+            <div className="description">
+              <div
+                // style={{
+                //   backgroundColor: textcolor,
+                // }}
+                className="bar"
+              ></div>
+              {description}
+              <Link
+                className="the_link"
+                // style={{
+                //   color: textcolor,
+                //   border: `.1em solid ${textcolor}`,
+                // }}
+                to={link}
+              >
+                Voir plus <ion-icon name="arrow-forward-outline"></ion-icon>
+              </Link>
+              {/* {The_Experience ? (
+                <a
+                  // style={{
+                  //   color: textcolor,
+                  //   border: `.1em solid ${textcolor}`,
+                  // }}
+                  className="the_link"
+                  href={The_Experience_Link}
+                  target="_blank"
+                >
+                  Experience VR/AR{" "}
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+              ) : (
+                <div></div>
+              )} */}
+            </div>
+          </div>
+          <div
+            loading="lazy"
+            role="img"
+            alt={title}
+            className="image_container"
+            style={{
+              backgroundImage: `url('${image}')`,
+            }}
+          ></div>
+        </section>
+      ) : (
+        <section className="One_Project_In_Home left">
+          <div
+            // style={{
+            //   color: textcolor,
+            // }}
+            className="info_container"
+          >
+            <h3
+              // style={{
+              //   color: textcolor,
+              // }}
+              className="title"
+            >
+              {title}
+            </h3>
+            <div className="description">
+              <div
+                // style={{
+                //   backgroundColor: textcolor,
+                // }}
+                className="bar"
+              ></div>
+              {description}
+              <Link
+                className="the_link"
+                // style={{
+                //   color: textcolor,
+                //   border: `.1em solid ${textcolor}`,
+                // }}
+                to={link}
+              >
+                Voir plus <ion-icon name="arrow-forward-outline"></ion-icon>
+              </Link>
+              {/* {The_Experience ? (
+                <a
+                  // style={{
+                  //   color: textcolor,
+                  //   border: `.1em solid ${textcolor}`,
+                  // }}
+                  className="the_link"
+                  href={The_Experience_Link}
+                  target="_blank"
+                >
+                  Experience VR/AR{" "}
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+              ) : (
+                <div></div>
+              )} */}
+            </div>
+          </div>
+          <div
+            loading="lazy"
+            role="img"
+            alt={title}
+            className="image_container"
+            style={{
+              backgroundImage: `url('${image}')`,
+            }}
+          ></div>
+        </section>
+      )}
+    </Fragment>
+  );
 }
 
 export default Historique;

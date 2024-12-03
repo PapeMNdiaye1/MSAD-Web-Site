@@ -2,6 +2,18 @@ import { React, useEffect } from "react";
 
 function Contacts({}) {
   useEffect(() => {
+    let ThePageTitle = document.querySelectorAll(".One-slider-Section-B");
+
+    ThePageTitle.forEach((e) => {
+      e.style.color = "";
+      e.style.color = "";
+      e.style.fontWeight = "";
+    });
+
+    ThePageTitle[4].style.transform = "scale(1.1)";
+    ThePageTitle[4].style.color = "#C9A050";
+    ThePageTitle[4].style.fontWeight = "400";
+
     let ToDisplayonBLoade = document.querySelector(".before-loader");
     ToDisplayonBLoade.style.display = "none";
 
