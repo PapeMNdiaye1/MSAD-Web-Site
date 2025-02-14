@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-import ImageforIntro1 from "../Style/Images/Tableaux/GUISS-GUISS DE L'AEMSAD.jpg";
-import ImageforIntro2 from "../Style/Images/Tableaux/CHANT DES TIRAILLEURS SENEGALAIS DE SEYNI GADIAGA.JPG";
+import ImageforIntro1 from "../Style/Images/Tableaux/CHANT DES TIRAILLEURS SENEGALAIS DE SEYNI GADIAGA.JPG";
+import ImageforIntro2 from "../Style/Images/Tableaux/GUISS-GUISS DE L'AEMSAD.jpg";
 import ImageforIntro3 from "../Style/Images/Tableaux/LE MAITRE DU BOIS SACRE Ansoumana DIEDHIOU.JPG";
 import ImageforIntro4 from "../Style/Images/Tableaux/GUISS-GUISS DE L'AEMSAD.jpg";
 
