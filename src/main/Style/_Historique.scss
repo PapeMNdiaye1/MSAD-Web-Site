@@ -16,7 +16,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    margin: 5vw 10vw;
+    margin: 15vw 10vw;
 
     .image_container {
       width: 100%;
@@ -25,6 +25,7 @@
       background-repeat: no-repeat;
       background-size: 100%;
       transition-duration: 0.4s;
+      border-radius: 0.5em;
       // background-color: rgba(0, 0, 0, 0.3);
 
       &:hover {
@@ -49,8 +50,8 @@
         align-items: flex-end;
         width: 80%;
         height: 70%;
-        font-family: "Montserrat", sans-serif;
-        font-size: 2em;
+        font-family: "Lora", serif;
+        font-size: 3em;
         font-weight: 900;
         text-decoration: none;
       }
@@ -62,10 +63,11 @@
         @include cent();
         justify-content: flex-start;
         align-items: flex-start;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Lora", serif;
         font-size: 1em;
         font-weight: 700;
         flex-wrap: wrap;
+        color: #767676;
 
         .the_link {
           margin-top: 1em;

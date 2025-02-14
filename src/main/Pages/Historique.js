@@ -1,6 +1,6 @@
 import { React, useEffect, useState, Fragment } from "react";
 import { Link } from "react-router-dom";
-import ImageProjectP1 from "../Style/Images/Tableaux/DIALA NDAMA ALASSANE M. DIOP.png";
+import ImageProjectP1 from "../Style/Images/Tableaux/DIALA NDAMA ALASSANE M. DIOP-B.png";
 
 function Historique({}) {
   useEffect(() => {
@@ -25,6 +25,7 @@ function Historique({}) {
     let hoverLoaderContainer = document.querySelector(
       ".hover_loader_container"
     );
+
     hoverLoaderContainer.style.display = "flex";
 
     setTimeout(function () {
@@ -46,7 +47,7 @@ function Historique({}) {
         title={"Article-1"}
         image={ImageProjectP1}
         description={
-          "Des designs Modernes et épurés. Nous mettons en œuvre différentes approches pour une optimisation de vos espaces extérieurs et intérieurs. Pour se faire nous utilisons différents logiciels avec les dernières innovations pour des rendus d’images à la fois réalistes et immersives."
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         }
         // color={"#2b2828"}
         // textcolor={"#f1f1f1"}
@@ -60,13 +61,27 @@ function Historique({}) {
         title={"Article-2"}
         image={ImageProjectP1}
         description={
-          "érents logiciels avec les dernières innovations pour des rendus d’images à la fois réalistes et immersives."
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         }
         // color={"#2b2828"}
         // textcolor={"#f1f1f1"}
         theKey={2}
         link={"/Villa"}
         side={"right"}
+        The_Experience={true}
+        The_Experience_Link={"https://archviz-villa-astan.netlify.app/"}
+      />
+      <OneBigProject
+        title={"Article-1"}
+        image={ImageProjectP1}
+        description={
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        }
+        // color={"#2b2828"}
+        // textcolor={"#f1f1f1"}
+        theKey={3}
+        link={"/Villa"}
+        side={"left"}
         The_Experience={true}
         The_Experience_Link={"https://archviz-villa-astan.netlify.app/"}
       />

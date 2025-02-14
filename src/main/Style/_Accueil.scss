@@ -10,49 +10,114 @@
   min-height: 200%;
   height: auto;
   z-index: 1;
+
   #Section-1 {
+    top: -1em;
     width: 100%;
-    background-color: bisque;
-    height: auto;
+    height: 70vw;
     @include cent();
-    .hover-the-image {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+
+    .thumbs {
+      display: none;
+    }
+
+    .control-dots {
+      z-index: 10;
+      position: absolute;
+      bottom: 8%;
+      left: 50%;
+      transform: translate(-50%);
+      @include cent();
+
+      .dot {
+        transform: scale(1.2);
+        margin: 0.6em;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.24);
+      }
+    }
+
+    .carousel-status {
+      display: none;
+    }
+
+    .sliders {
+      background-position: inherit;
+      background-size: 100%;
+      background-repeat: no-repeat;
       width: 100%;
       height: 100%;
-      background-color: black;
-      opacity: 0.8;
-      position: absolute;
-    }
-    .text-hover-container {
-      position: absolute;
-      width: 100%;
-      height: 30%;
       @include cent();
-      flex-wrap: wrap;
-      .SeeArticle {
-        width: 10em;
-        height: 3em;
+      flex-direction: column;
+      grid-column: 1 / 1;
+      grid-row: 1 / 1;
+      transition-duration: 1s, 0s;
+      transition-property: opacity, background-position-y;
+
+      .sliders_inner_container {
+        position: absolute;
+        background-position: inherit;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
         @include cent();
-        color: #c9a050;
-        font-family: "Playfair Display", serif;
+        flex-direction: column;
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+        transition-duration: 1s, 0s;
+        transition-property: opacity, background-position-y;
+        .hover-the-image {
+          width: 100%;
+          height: 100%;
+          background-color: black;
+          opacity: 0.4;
+          position: absolute;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+        // opacity: .5;
+        .slider_title {
+          font-weight: 900;
+          color: var(--color0);
+          font-size: 4vw;
+          width: 70%;
+          margin: 0% 15% 2% 15%;
+          text-align: center;
+          font-family: "Playfair Display", serif;
+
+          // p {
+          //   text-align: left;
+          // }
+        }
+
+        .slider_date {
+          // position: absolute;
+          width: 10em;
+          height: 3em;
+          @include cent();
+          background-color: var(--color0);
+          border-radius: 5em;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
       }
-      h1 {
-        color: var(--color0);
-        font-size: 4vw;
-        width: 70%;
-        margin: 0% 15% 2% 15%;
-        text-align: center;
-        font-family: "Playfair Display", serif;
-      }
-      .SeeMoreBtn {
+
+      img {
+        // display: none;
+        width: 100%;
+        height: 100%;
+        // display: none;
         // position: absolute;
-        width: 10em;
-        height: 3em;
-        @include cent();
-        background-color: var(--color0);
-        border-radius: 5em;
       }
     }
   }
+
   #Section-2 {
     width: calc(100% - 20vw);
     background-color: #eeede0;
@@ -90,6 +155,12 @@
       height: 40em;
       width: 25em;
       margin: auto;
+      background-image: url("../Style/Images/Tableaux/DIALA\ NDAMA\ ALASSANE\ M.\ DIOP.png");
+      background-size: 120%;
+      background-position: center;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
   #Section-3 {
@@ -131,10 +202,18 @@
       grid-column-gap: 2em;
       grid-template-rows: 1fr;
       padding: 0.5em;
+      &:hover {
+        transform: scale(1.05);
+      }
       .image-container {
         background-color: #767676;
         grid-column: 2;
         grid-row: 1;
+        background-image: url("../Style/Images/Tableaux/P1220256.JPG");
+        background-size: 180%;
+      }
+      .image-container-2 {
+        background-image: url("../Style/Images/Tableaux/P1240540.JPG");
       }
       .text-container {
         width: 80%;
@@ -186,6 +265,13 @@
       background-color: #1c1c1c;
       grid-column: 1;
       grid-row: 1;
+      background-image: url("./Images/Tableaux/Guiss-Guiss\ A.E.des\ MSAD.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 90%;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
     .image-2 {
       grid-column: 1;
@@ -195,7 +281,13 @@
       background-color: gray;
       left: 50%;
       top: 60%;
-      // transform: ;
+      background-image: url("./Images/Tableaux/LE\ MAITRE\ DU\ BOIS\ SACRE\ Ansoumana\ DIEDHIOU.JPG");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
     text-container {
       // padding-top: 20%;
@@ -244,15 +336,24 @@
     .box-2,
     .box-3 {
       background-color: #eeede0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
     .box-1 {
       grid-row: 2;
+      background-image: url("./Images/Tableaux/P1350709.JPG");
     }
     .box-2 {
       grid-row: 2;
+      background-image: url("./Images/Tableaux/DSC_8157.JPG");
     }
     .box-3 {
       grid-row: 2;
+      background-image: url("./Images/Tableaux/P1270774.JPG");
     }
   }
 }
@@ -260,7 +361,7 @@
 //!############################################
 @media all and (max-width: 1000px) {
   #Accueil {
-    .Accueil_Slider-2 {
+    #Section-1 {
       // height: auto;
       overflow: hidden;
       height: 60vh;

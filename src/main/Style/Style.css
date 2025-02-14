@@ -710,39 +710,81 @@
   z-index: 1;
 }
 #Accueil #Section-1 {
+  top: -1em;
   width: 100%;
-  background-color: bisque;
-  height: auto;
+  height: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  overflow: hidden;
+}
+#Accueil #Section-1 .thumbs {
+  display: none;
+}
+#Accueil #Section-1 .control-dots {
+  z-index: 10;
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#Accueil #Section-1 .hover-the-image {
+#Accueil #Section-1 .control-dots .dot {
+  transform: scale(1.2);
+  margin: 0.6em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+#Accueil #Section-1 .carousel-status {
+  display: none;
+}
+#Accueil #Section-1 .sliders {
+  background-position: inherit;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-column: 1/1;
+  grid-row: 1/1;
+  transition-duration: 1s, 0s;
+  transition-property: opacity, background-position-y;
+}
+#Accueil #Section-1 .sliders .sliders_inner_container {
+  position: absolute;
+  background-position: inherit;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-column: 1/1;
+  grid-row: 1/1;
+  transition-duration: 1s, 0s;
+  transition-property: opacity, background-position-y;
+}
+#Accueil #Section-1 .sliders .sliders_inner_container .hover-the-image {
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.8;
+  opacity: 0.4;
   position: absolute;
 }
-#Accueil #Section-1 .text-hover-container {
-  position: absolute;
-  width: 100%;
-  height: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+#Accueil #Section-1 .sliders .sliders_inner_container .hover-the-image:hover {
+  transform: scale(1.05);
 }
-#Accueil #Section-1 .text-hover-container .SeeArticle {
-  width: 10em;
-  height: 3em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #c9a050;
-  font-family: "Playfair Display", serif;
-}
-#Accueil #Section-1 .text-hover-container h1 {
+#Accueil #Section-1 .sliders .sliders_inner_container .slider_title {
+  font-weight: 900;
   color: var(--color0);
   font-size: 4vw;
   width: 70%;
@@ -750,7 +792,7 @@
   text-align: center;
   font-family: "Playfair Display", serif;
 }
-#Accueil #Section-1 .text-hover-container .SeeMoreBtn {
+#Accueil #Section-1 .sliders .sliders_inner_container .slider_date {
   width: 10em;
   height: 3em;
   display: flex;
@@ -758,6 +800,13 @@
   align-items: center;
   background-color: var(--color0);
   border-radius: 5em;
+}
+#Accueil #Section-1 .sliders .sliders_inner_container .slider_date:hover {
+  transform: scale(1.05);
+}
+#Accueil #Section-1 .sliders img {
+  width: 100%;
+  height: 100%;
 }
 #Accueil #Section-2 {
   width: calc(100% - 20vw);
@@ -800,6 +849,12 @@
   height: 40em;
   width: 25em;
   margin: auto;
+  background-image: url("../Style/Images/Tableaux/DIALA NDAMA ALASSANE M. DIOP.png");
+  background-size: 120%;
+  background-position: center;
+}
+#Accueil #Section-2 .image-container:hover {
+  transform: scale(1.05);
 }
 #Accueil #Section-3 {
   width: calc(100% - 20vw);
@@ -839,11 +894,21 @@
   grid-template-rows: 1fr;
   padding: 0.5em;
 }
+#Accueil #Section-3 .box-1:hover,
+#Accueil #Section-3 .box-2:hover {
+  transform: scale(1.05);
+}
 #Accueil #Section-3 .box-1 .image-container,
 #Accueil #Section-3 .box-2 .image-container {
   background-color: #767676;
   grid-column: 2;
   grid-row: 1;
+  background-image: url("../Style/Images/Tableaux/P1220256.JPG");
+  background-size: 180%;
+}
+#Accueil #Section-3 .box-1 .image-container-2,
+#Accueil #Section-3 .box-2 .image-container-2 {
+  background-image: url("../Style/Images/Tableaux/P1240540.JPG");
 }
 #Accueil #Section-3 .box-1 .text-container,
 #Accueil #Section-3 .box-2 .text-container {
@@ -893,6 +958,13 @@
   background-color: #1c1c1c;
   grid-column: 1;
   grid-row: 1;
+  background-image: url("./Images/Tableaux/Guiss-Guiss A.E.des MSAD.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+}
+#Accueil #Section-4 .image-1:hover {
+  transform: scale(1.05);
 }
 #Accueil #Section-4 .image-2 {
   grid-column: 1;
@@ -902,6 +974,13 @@
   background-color: gray;
   left: 50%;
   top: 60%;
+  background-image: url("./Images/Tableaux/LE MAITRE DU BOIS SACRE Ansoumana DIEDHIOU.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#Accueil #Section-4 .image-2:hover {
+  transform: scale(1.05);
 }
 #Accueil #Section-4 text-container h3 {
   color: #767676;
@@ -943,26 +1022,37 @@
 #Accueil #Section-5 .box-2,
 #Accueil #Section-5 .box-3 {
   background-color: #eeede0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#Accueil #Section-5 .box-1:hover,
+#Accueil #Section-5 .box-2:hover,
+#Accueil #Section-5 .box-3:hover {
+  transform: scale(1.05);
 }
 #Accueil #Section-5 .box-1 {
   grid-row: 2;
+  background-image: url("./Images/Tableaux/P1350709.JPG");
 }
 #Accueil #Section-5 .box-2 {
   grid-row: 2;
+  background-image: url("./Images/Tableaux/DSC_8157.JPG");
 }
 #Accueil #Section-5 .box-3 {
   grid-row: 2;
+  background-image: url("./Images/Tableaux/P1270774.JPG");
 }
 
 @media all and (max-width: 1000px) {
-  #Accueil .Accueil_Slider-2 {
+  #Accueil #Section-1 {
     overflow: hidden;
     height: 60vh;
   }
-  #Accueil .Accueil_Slider-2 .control-dots .dot {
+  #Accueil #Section-1 .control-dots .dot {
     transform: scale(1.3);
   }
-  #Accueil .Accueil_Slider-2 .sliders {
+  #Accueil #Section-1 .sliders {
     background-size: 100%;
     background-size: cover;
     background-position-x: 30%;
@@ -971,25 +1061,25 @@
     height: 65vh;
     overflow: hidden;
   }
-  #Accueil .Accueil_Slider-2 .sliders img {
+  #Accueil #Section-1 .sliders img {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  #Accueil .Accueil_Slider-2 .sliders .sliders_inner_container {
+  #Accueil #Section-1 .sliders .sliders_inner_container {
     height: 100%;
     overflow: hidden;
   }
-  #Accueil .Accueil_Slider-2 .sliders .sliders_inner_container .slider_title {
+  #Accueil #Section-1 .sliders .sliders_inner_container .slider_title {
     width: 80%;
     font-size: 2em;
     margin-left: 0%;
   }
-  #Accueil .Accueil_Slider-2 .sliders .sliders_inner_container .slider_date {
+  #Accueil #Section-1 .sliders .sliders_inner_container .slider_date {
     width: 80%;
     font-size: 0.9em;
     margin-left: 0vw;
   }
-  #Accueil .Accueil_Slider-2 .sliders:nth-child(1) .sliders_inner_container .slider_title:nth-child(1) {
+  #Accueil #Section-1 .sliders:nth-child(1) .sliders_inner_container .slider_title:nth-child(1) {
     color: var(--color0);
     opacity: 0.9;
   }
@@ -1101,7 +1191,6 @@
   height: auto;
   min-height: 200%;
   z-index: 1;
-  background-color: salmon;
 }
 #Travaux .Travaux-Header {
   width: 100%;
@@ -1335,7 +1424,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  margin: 5vw 10vw;
+  margin: 15vw 10vw;
 }
 #Historique .One_Project_In_Home .image_container {
   width: 100%;
@@ -1344,6 +1433,7 @@
   background-repeat: no-repeat;
   background-size: 100%;
   transition-duration: 0.4s;
+  border-radius: 0.5em;
 }
 #Historique .One_Project_In_Home .image_container:hover {
   background-size: 105%;
@@ -1369,8 +1459,8 @@
   align-items: flex-end;
   width: 80%;
   height: 70%;
-  font-family: "Montserrat", sans-serif;
-  font-size: 2em;
+  font-family: "Lora", serif;
+  font-size: 3em;
   font-weight: 900;
   text-decoration: none;
 }
@@ -1383,10 +1473,11 @@
   align-items: center;
   justify-content: flex-start;
   align-items: flex-start;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Lora", serif;
   font-size: 1em;
   font-weight: 700;
   flex-wrap: wrap;
+  color: #767676;
 }
 #Historique .One_Project_In_Home .info_container .description .the_link {
   margin-top: 1em;
@@ -1442,7 +1533,6 @@
   height: auto;
   min-height: 200%;
   z-index: 1;
-  background-color: royalblue;
 }
 #Contacts .follow_us {
   width: 100%;
@@ -1565,7 +1655,6 @@
   height: auto;
   min-height: 200%;
   z-index: 1;
-  background-color: rebeccapurple;
 }
 #Articles .the_galerie_presantation_container {
   width: 100%;

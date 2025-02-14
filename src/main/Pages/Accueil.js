@@ -3,52 +3,10 @@ import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-import ImageforIntro1 from "../Style/Images/Project/Image-1.jpg";
-import Tableau1 from "../Style/Images/Tableaux/JOMBAJO DE KALIDOU KASSE.jpg";
-// import ImageforIntro4 from "../Style/Images/Project/Pharmacie-3.jpg";
-
-// import ImageProjectB1 from "../Style/Images/Project/City-8.jpg";
-// import ImageProjectB2 from "../Style/Images/Project/City-1.jpg";
-// import ImageProjectB3 from "../Style/Images/Project/City-3.jpg";
-// import ImageProjectB9 from "../Style/Images/Project/City-9.jpg";
-
-// import ImageProjectE3 from "../Style/Images/Project/Pharmacie-3.jpg";
-
-// import ImageProjectI2 from "../Style/Images/Project/Villa_B-2.jpg";
-// import ImageProjectI3 from "../Style/Images/Project/Villa_B-3.jpg";
-// import ImageProjectI4 from "../Style/Images/Project/Villa_B-8.jpg";
-
-// import ImageProjectK1 from "../Style/Images/Project/Pharmacie_C-1.jpg";
-
-// import ImageProjectL1 from "../Style/Images/Project/Villa_Teranga_Al_Amin-1.jpg";
-// import ImageProjectL2 from "../Style/Images/Project/Villa_Teranga_Al_Amin-2.jpg";
-
-// import ImageProjectH1 from "../Style/Images/Project/Villa_Astan-Ndiaye-1.jpg";
-// import ImageProjectJ1 from "../Style/Images/Project/Appartement-F4-A-1.jpg";
-
-// import ImageProjectS1 from "../Style/Images/Project/Villa_Samb-1.jpg";
-// import ImageProjectS2 from "../Style/Images/Project/Villa_Samb-2.jpg";
-// import ImageProjectS3 from "../Style/Images/Project/Villa_Samb-3.jpg";
-// import ImageProjectS4 from "../Style/Images/Project/Villa_Samb-4.jpg";
-
-// import ImageProjectS7 from "../Style/Images/Project/Villa_Samb-7.jpg";
-// import ImageProjectS10 from "../Style/Images/Project/Villa_Samb-8.jpg";
-
-// import ImageProjectT2 from "../Style/Images/Project/Villa-Onomo-2.jpg";
-// import ImageProjectT4 from "../Style/Images/Project/Villa-Onomo-4.jpg";
-// import ImageProjectT7 from "../Style/Images/Project/Villa-Onomo-7.jpg";
-// import ImageProjectT8 from "../Style/Images/Project/Villa-Onomo-8.jpg";
-// import ImageProjectT9 from "../Style/Images/Project/Villa-Onomo-9.jpg";
-
-// import ImageProjectP1 from "../Style/Images/Project/Immeuble-Talles-6.jpg";
-
-// import ImageProjectBB1 from "../Style/Images/Project/Office-B-1.jpg";
-// import ImageProjectBB2 from "../Style/Images/Project/Office-B-2.jpg";
-// import ImageProjectBB3 from "../Style/Images/Project/Office-B-3.jpg";
-// import ImageProjectBB6 from "../Style/Images/Project/Office-B-6.jpg";
-
-// import ImageProjectQ1 from "../Style/Images/Project/Villa-Sarr-1.jpg";
-// import ImageProjectQ10 from "../Style/Images/Project/Villa-Sarr-10.jpg";
+import ImageforIntro1 from "../Style/Images/Tableaux/GUISS-GUISS DE L'AEMSAD.jpg";
+import ImageforIntro2 from "../Style/Images/Tableaux/CHANT DES TIRAILLEURS SENEGALAIS DE SEYNI GADIAGA.JPG";
+import ImageforIntro3 from "../Style/Images/Tableaux/LE MAITRE DU BOIS SACRE Ansoumana DIEDHIOU.JPG";
+import ImageforIntro4 from "../Style/Images/Tableaux/GUISS-GUISS DE L'AEMSAD.jpg";
 
 function Accueil({ GetImageToApp }) {
   useEffect(() => {
@@ -95,14 +53,62 @@ function Accueil({ GetImageToApp }) {
   return (
     <div id="Accueil">
       <div id="Section-1">
-        <img loading="lazy" src={ImageforIntro1} width="100%" />
-        <div className="hover-the-image"></div>
-        <div className="text-hover-container">
-          <div className="SeeArticle">Voir Expositions</div>
-          <h1>Manufactures Sénégalaises Des Arts Décoratifs De Thiés</h1>
-          <div className="SeeMoreBtn">Voir Plus</div>
-        </div>
+        <Carousel>
+          <div className="sliders">
+            <img loading="lazy" src={ImageforIntro1} />
+            <div className="sliders_inner_container">
+              <div className="hover-the-image"></div>
+              <div
+                style={{
+                  color: "#f1f1f1",
+                }}
+                className="slider_title"
+              >
+                <p>Manufactures Sénégalaises Des Arts Décoratifs De Thiés</p>
+              </div>
+              <div
+                style={{
+                  color: "#000",
+                }}
+                className="slider_date"
+              >
+                Voir Plus
+              </div>
+            </div>
+          </div>
+          <div className="sliders">
+            <img loading="lazy" src={ImageforIntro2} />
+            <div className="sliders_inner_container">
+              <div className="hover-the-image"></div>
+              <div className="slider_title">
+                <p>Manufactures Sénégalaises Des Arts Décoratifs De Thiés</p>
+              </div>
+              <div className="slider_date">Voir Plus</div>
+            </div>
+          </div>
+          <div loading="lazy" className="sliders">
+            <img src={ImageforIntro3} />
+            <div className="sliders_inner_container">
+              <div className="hover-the-image"></div>
+              <div className="slider_title">
+                <p>Manufactures Sénégalaises Des Arts Décoratifs De Thiés</p>
+              </div>
+              <div className="slider_date">Voir Plus</div>
+            </div>
+          </div>
+          <div loading="lazy" className="sliders">
+            <img src={ImageforIntro4} />
+            <div className="sliders_inner_container">
+              <div className="hover-the-image"></div>
+              <div className="slider_title">
+                <p>Manufactures Sénégalaises Des Arts Décoratifs De Thiés</p>
+              </div>
+              <div className="slider_date">Voir Plus</div>
+            </div>
+          </div>
+        </Carousel>
       </div>
+
       <div id="Section-2">
         <div className="text-container">
           <h3>About the museum</h3>
@@ -135,7 +141,7 @@ function Accueil({ GetImageToApp }) {
               12 Jan 2021 - 27 Feb 2021
             </div>
           </div>
-          <div className="image-container"></div>
+          <div className="image-container image-container-2"></div>
         </div>
         <div className="box-2">
           <div className="text-container">
